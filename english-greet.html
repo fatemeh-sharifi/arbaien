@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("Salam-Bar-Hosaein.png");
+            font-family: 'Lora', serif;            
+            background-size: cover;
+            background-position: center;
+        }
+        .custom-dropdown {
+            background-color: rgba(255, 255, 255, 0.4);
+            padding: 8px;
+            border-radius: 10px;
+            width: 50%;
+            color: #000;
+            display: inline-block;
+            border: 1px solid #630000;
+        }
+
+        .selectLable{
+            display: inline-block;
+            padding-right: 20px;
+            font-size: larger;
+            font-weight: bold;
+            color: #444444;
+        }
+        .card {
+            width: fit-content;
+            border: 2px solid #630000;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .card-body {
+            flex: 1;
+        }
+        .container{
+            margin: 50% auto;
+        }
+        .selection{
+            margin: 5% auto 2% auto;
+            text-align: center;
+        }
+        .beginP{
+            margin: 4% auto;
+            text-align: center;
+            font-size: x-large;
+        }
+        .bg-gradient-primary {
+            border-radius: 10px;
+            /* padding: 2% 7%; */
+            font-size: 1.3rem;
+            font-weight: bold;
+            background-image: linear-gradient(195deg,#17B978 0%, #205d29 100%);
+        }
+        .btn-primary, .btn.bg-gradient-primary {
+            box-shadow: 0 3px 3px 0 rgb(30 233 94 / 15%), 0 3px 1px -2px rgb(30 233 92 / 20%), 0 1px 5px 0 rgb(30 233 47 / 15%);
+        }
+        .btn-primary:hover, .btn.bg-gradient-primary:hover {
+            background-color: #1ee958;
+            border-color: #20e91e;
+            box-shadow: 0 14px 26px -12px rgb(30 233 71 / 40%), 0 4px 23px 0 rgb(30 233 90 / 15%), 0 8px 10px -5px rgb(30 233 32 / 20%);
+        }
+        .bt1{
+            padding: 1.5% 9%;
+            margin: 3% 10% 0 0;
+        }
+        .bt2{
+            padding: 1.5% 2%;
+            margin: 3% 0 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container justify-content-center align-items-center">
+        <div class="card h-100 d-flex w-auto" >
+            <div class="card-body d-flex flex-column flex-grow-1">
+                <div class="row gx-4 mb-2">
+                    <div class="selection">
+                        <label for="langSelect" class="form-label selectLable">Select the language :</label>
+                        <select id="langSelect" class="form-select triangle-left custom-dropdown" aria-label="Default select example" data-live-search="true">
+                            <option selected>Choose...</option>
+                            <option value="persian" >Persian</option>
+                            <option value="arabic" >Arabic</option>
+                            <option value="english" >English</option>
+                        </select>
+                    </div>  
+                </div>
+                <div class="beginP">
+                    <p>
+                        Hi dear friend <br> welcome <br> We are very happy to meet you <br> We have written this letter for you <br> For more communication, please enter our Telegram channelWe have many friends there
+                    </p>
+                    <a href="https://t.me/mokebhossein" class="btn bg-gradient-primary bt1" target="_blank">Join us</a>
+                    <a href="english-letter.html" class="btn bg-gradient-primary bt2">View the letter</a>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const langSelect = document.getElementById('langSelect');
+
+            langSelect.addEventListener('change', function () {
+                const selectedOption = langSelect.value;
+                const optionToURL = {
+                    'persian': 'persian-greet.html', 
+                    'arabic': 'arabic-greet.html',
+                    'english': 'english-greet.html'
+                };
+
+                const selectedURL = optionToURL[selectedOption];
+                localStorage.setItem('selectedOption', selectedOption);
+                if (selectedURL) {
+                    window.location.href = selectedURL;
+                }
+            });
+            const storedOption = localStorage.getItem('selectedOption');
+            if (storedOption) {
+                langSelect.value = storedOption;
+            }
+        });
+      </script>
+</body>
+</html>

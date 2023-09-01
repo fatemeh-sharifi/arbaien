@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="per" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("Salam-Bar-Hosaein.png");
+            font-family: 'Amiri', serif;
+            background-size: cover;
+            background-position: center;
+        }
+        .custom-dropdown {
+            background-color: rgba(255, 255, 255, 0.4);
+            padding: 8px;
+            border-radius: 10px;
+            width: 50%;
+            color: #000;
+            display: inline-block;
+            border: 1px solid #630000;
+        }
+
+        .triangle-left {
+            padding-left: 25px; 
+            background-repeat: no-repeat;
+            background-position: 5px center;
+        }
+
+        .selectLable{
+            display: inline-block;
+            padding-left: 20px;
+            font-size: larger;
+            font-weight: bold;
+            color: #444444;
+        }
+        .card {
+            width: fit-content;
+            border: 2px solid #630000;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .card-body {
+            flex: 1;
+        }
+        .container{
+            margin: 50% auto;
+        }
+        .selection{
+            margin: 5% auto 2% auto;
+            text-align: center;
+        }
+        .beginP{
+            margin: 4% auto;
+            padding: 0 4%;
+            text-align: justify;
+            font-size: x-large;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container justify-content-center align-items-center">
+        <div class="card h-100 d-flex w-auto" >
+            <div class="card-body d-flex flex-column flex-grow-1">
+                <div class="row gx-4 mb-2">
+                    <div class="selection">
+                        <label for="langSelect" class="form-label selectLable">زبان را انتخاب کنید :</label>
+                        <select id="langSelect" class="form-select triangle-left custom-dropdown" aria-label="Default select example" data-live-search="true">
+                            <option selected>انتخاب...</option>
+                            <option value="persian" >فارسی</option>
+                            <option value="arabic" >عربی</option>
+                            <option value="english" >انگلیسی</option>
+                        </select>
+                    </div>  
+                </div>
+                <div class="beginP">
+                    <p>
+                        با نام خدا <br> سلام دوست من <br> انسان بواسطه انسی که با آدمها داره، بین مردم زندگی میکنه. یکی از هدفهای اصلی انسان این‌ هست که بتونه در خیرات بروز پیدا کرده و رشد کنه بخاطر همین هم هست عزلت نشینی و یه گوشه رفتن و قطع ارتباط با مردم نهی شده چون آدم وقتی در جمع هست در معرض ایثار و مهربانی و سخاوت و غیبت و دروغ و .... قرار می‌گیره. <br> یکی از مهم‌ترین آسیب هایی که خودش رو در زندگی اجتماعی نشون میده اینکه ما رو در اولویت‌بندی فعالیت‌ها دچار مشکل و چالش می‌کنه. <br> احتمالا تا حالا برات پیش اومده که میخواستی یه کار خوبی انجام بدی، یا اینکه نمی‌خواستی سمت کار اشتباهی بری، اما به دلیل پیشنهاد کس دیگه بر خلاف میل اولیت عمل کردی. مثلا داشتی میرفتی برای نماز اول وقت آماده بشی، اما یه پیام یا یه مطلب جالب رو تو گوشیت دیدی یا رفتی دو دقیقه یه کاری رو انجام بدی....؛ این دو دقیقه یه کاری رو انجام بدی همان، و طول کشیدن کار و گذشتن فضیلت نماز همان...این آسیب اینطوریه که میاد تو کار خیری که تشخیص دادی باید الان انجام بدی، تاخیر میندازه! <br> میدونی موضوع اینکه اگر این اتفاق یه بار بیفته شاید خیلی مهم نباشه! اما این آسیب اینطوری نیست که به یه بار و یه کار محدود بشه، بلکه این اتفاق می‌تونه تو خیلی از کارهای ما اتفاق بیفته، حتی میتونه اینقدر تو کار خوبی که باید انجام بدی تاخیر بندازه که بعد یه مدت اصلا اون کار خوب یادت بره! <br> اسم این آسیب تو قرآن "وسواس خناسِ"؛ که روی اون چیزی که تو نسبت به اون علم داشتی و میخواستی انجام بدی شک ایجاد می‌کنه، دقیقا شبیه وسواس، احتمالا کسی که وسواس داره رو دیده باشی. <br> این خیلی آسیب مهمی در زندگی انسانه، چراکه می‌تونه فرد رو کم‌کم به اون کارهای خوبی که انجام میداده بی‌میل کنه تا جایی که آدم نسبت به اون کار خوب هیچ نسبتی پیدا نکنه. <br> این نامه فرصت خوبی هست تا تو هم‌ مثل من از این آسیب به خداوند سوره ناس پناه ببری و دیگران رو از این آسیب مطلع کنی. <br> تازه اگر‌ دوست داشته باشی می‌تونیم بیشتر باهم قرآن بخونیم.
+                    </p>                    
+                </div>
+            </div>
+        </div> 
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const langSelect = document.getElementById('langSelect');
+
+            langSelect.addEventListener('change', function () {
+                const selectedOption = langSelect.value;
+                const optionToURL = {
+                    'persian': 'persian-letter.html', 
+                    'arabic': 'arabic-letter.html',
+                    'english': 'english-letter.html'
+                };
+
+                const selectedURL = optionToURL[selectedOption];
+                localStorage.setItem('selectedOption', selectedOption);
+                if (selectedURL) {
+                    window.location.href = selectedURL;
+                }
+            });
+            const storedOption = localStorage.getItem('selectedOption');
+            if (storedOption) {
+                langSelect.value = storedOption;
+            }
+        });
+      </script>
+</body>
+</html>

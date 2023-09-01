@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("Salam-Bar-Hosaein.png");
+            font-family: 'Lora', serif;            
+            background-size: cover;
+            background-position: center;
+        }
+        .custom-dropdown {
+            background-color: rgba(255, 255, 255, 0.4);
+            padding: 8px;
+            border-radius: 10px;
+            width: 50%;
+            color: #000;
+            display: inline-block;
+            border: 1px solid #630000;
+        }
+
+        .selectLable{
+            display: inline-block;
+            padding-right: 20px;
+            font-size: larger;
+            font-weight: bold;
+            color: #444444;
+        }
+        .card {
+            width: fit-content;
+            border: 2px solid #630000;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .card-body {
+            flex: 1;
+        }
+        .container{
+            margin: 50% auto;
+        }
+        .selection{
+            margin: 5% auto 2% auto;
+            text-align: center;
+        }
+        .beginP{
+            margin: 4% auto;
+            padding: 0 4%;
+            text-align: justify;
+            font-size: x-large;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container justify-content-center align-items-center">
+        <div class="card h-100 d-flex w-auto" >
+            <div class="card-body d-flex flex-column flex-grow-1">
+                <div class="row gx-4 mb-2">
+                    <div class="selection">
+                        <label for="langSelect" class="form-label selectLable">Select the language :</label>
+                        <select id="langSelect" class="form-select triangle-left custom-dropdown" aria-label="Default select example" data-live-search="true">
+                            <option selected>Choose...</option>
+                            <option value="persian" >Persian</option>
+                            <option value="arabic" >Arabic</option>
+                            <option value="english" >English</option>
+                        </select>
+                    </div>  
+                </div>
+                <div class="beginP">
+                    <p>
+                        In the name of God <br>
+                        Hello <br>
+                        Have you ever wanted to pack your things and
+                        live on an island alone? Sometimes we want to
+                        run away from everyone and everything. Then
+                        we think to ourselves that real life is not
+                        definitely like Dr. Ernst's family or Robinson
+                        Crusoe's story, where it is easy to live alone. <br>
+                        When we think and review our needs, we realize
+                        that we can't live alone. That's right! Because
+                        human being is sociable and has been created for
+                        social life. <br>
+                        Mankind lives among people because of the
+                        relationship he has with people in the society
+                        and his needs, and one of the main goals is that
+                        man can develop and grow in doing good. <br>
+                        This is why seclusion, going to a corner and
+                        cutting off communication with people is
+                        forbidden, because when a person is in a group,
+                        he is exposed to sacrifice, kindness, generosity,
+                        backbiting, lies and etc., otherwise, it is much
+                        easier to live alone. <br>
+                        social life can harm a person at the same time if
+                        it is not planned, from the influence of bad
+                        friends to the media, bad news and lies to many other
+                        things. <br>
+                        One of the most important damages that
+                        manifests itself in social life is that it makes
+                        problems and challenges in prioritizing activities.
+                        It has probably happened to you that you wanted
+                        to do something good, or you didn't want to go in
+                        the wrong direction, but because of someone
+                        else's suggestion, you acted against your first
+                        desire. <br>
+                        For example, you were going to prepare for
+                        saying prayer on time, but you saw a message or
+                        an interesting article on your phone or you went
+                        to do something for two minutes. But you
+                        realized you have procrastinated saying prayer…
+                        so this damage delays the good work that you
+                        decided to do! You know, if this happens once, it
+                        might not be very important! But it is not limited
+                        to one time or one job, it can happen in many
+                        cases. It can even delay the good work that you
+                        should have done in a way that you completely
+                        forget to do that. <br>
+                        The name of this damage in the Quran is
+                        "obsession"; (vasvas khanas) which creates
+                        doubt on what you know and want to do, just like
+                        obsession, you have probably seen someone who
+                        is obsessed. For example, a person who is obsessed with performing ablution, after
+                        performing it and knowing that he performed, he
+                        doubts about whether his ablution was correct
+                        or not and she starts performing ablution again,
+                        while he could say prayer at that time. This
+                        process may go so far in a way that becomes
+                        difficult for the person to perform ablutions and
+                        say prayer. <br>
+                        This is a very important damage in human life,
+                        because it can gradually make a person dislike
+                        the good deeds that he used to do. <br>
+                    </p>                     
+                </div>
+            </div>
+        </div> 
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const langSelect = document.getElementById('langSelect');
+
+            langSelect.addEventListener('change', function () {
+                const selectedOption = langSelect.value;
+                const optionToURL = {
+                    'persian': 'persian-letter.html', 
+                    'arabic': 'arabic-letter.html',
+                    'english': 'english-letter.html'
+                };
+
+                const selectedURL = optionToURL[selectedOption];
+                localStorage.setItem('selectedOption', selectedOption);
+                if (selectedURL) {
+                    window.location.href = selectedURL;
+                }
+            });
+            const storedOption = localStorage.getItem('selectedOption');
+            if (storedOption) {
+                langSelect.value = storedOption;
+            }
+        });
+      </script>
+</body>
+</html>
