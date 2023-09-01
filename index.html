@@ -1,97 +1,104 @@
 <!DOCTYPE html>
-<html>
- 
+<html lang="per" dir="rtl">
 <head>
-    <title>DateTimepicker</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
- 
-    <!-- Include Bootstrap CDN -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
- 
-    <!-- Include Moment.js CDN -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
- 
-    <!-- Include Bootstrap DateTimePicker CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.css" integrity="sha512-E4kKreeYBpruCG4YNe4A/jIj3ZoPdpWhWgj9qwrr19ui84pU5gvNafQZKyghqpFIHHE4ELK7L9bqAv7wfIXULQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.min.css" integrity="sha512-/Ae8qSd9X8ajHk6Zty0m8yfnKJPlelk42HTJjOHDWs1Tjr41RfsSkceZ/8yyJGLkxALGMIYd5L2oGemy/x1PLg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/js/bootstrap-timepicker.min.js" integrity="sha512-2xXe2z/uA+2SyT/sTSt9Uq4jDKsT0lV4evd3eoE/oxKih8DSAsOF6LUb+ncafMJPAimWAXdu9W+yMXGrCVOzQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/js/bootstrap-timepicker.js" integrity="sha512-tlmsbYa/wD9/w++n4nY5im2NEhotYXO3k7WP9/ds91gJk3IqkIXy9S0rdMTsU4n7BvxCR3G4LW2fQYdZedudmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("Salam-Bar-Hosaein.png");
+            font-family: 'Amiri', serif;
+            background-size: cover;
+            background-position: center;
+        }
+        .custom-dropdown {
+            background-color: rgba(255, 255, 255, 0.4);
+            padding: 8px;
+            border-radius: 10px;
+            width: 50%;
+            color: #000;
+            display: inline-block;
+            border: 1px solid #630000;
+        }
+
+        .triangle-left {
+            padding-left: 25px; 
+            background-repeat: no-repeat;
+            background-position: 5px center;
+        }
+
+        .selectLable{
+            display: inline-block;
+            padding-left: 20px;
+            font-size: larger;
+            font-weight: bold;
+            color: #444444;
+        }
+        .card {
+            width: fit-content;
+            border: 2px solid #630000;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .card-body {
+            flex: 1;
+        }
+        .container{
+            margin: 50% auto;
+        }
+        .selection{
+            margin: 5% auto;
+            text-align: center;
+        }
+    </style>
 </head>
- 
 <body>
-    <div class="card card-custom">
-        <!--begin::Form-->
-        <form class="form">
-            <div class="card-body">
-                
-                <div class="form-group row">
-                    <label class="col-form-label text-right col-lg-3 col-sm-12">Current Time</label>
-                    <div class="col-lg-4 col-md-9 col-sm-12">
-                        <div class="input-group timepicker">
-                            <input class="form-control" id="kt_timepicker_2" readonly placeholder="Select time" type="text"/>
-                            <div class="input-group-append">
-                                <span class="input-group-text">
-                                    <i class="la la-clock-o"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+    <div class="container justify-content-center align-items-center">
+        <div class="card h-100 d-flex w-auto" >
+            <div class="card-body d-flex flex-column flex-grow-1">
+                <div class="row gx-4 mb-2">
+                    <div class="selection">
+                        <label for="langSelect" class="form-label selectLable">زبان را انتخاب کنید :</label>
+                        <select id="langSelect" class="form-select triangle-left custom-dropdown" aria-label="Default select example" data-live-search="true">
+                            <option selected>انتخاب...</option>
+                            <option value="persian" >فارسی</option>
+                            <option value="arabic" >عربی</option>
+                            <option value="english" >انگلیسی</option>
+                        </select>
+                    </div>  
                 </div>
-                
             </div>
-        </form>
-        <!--end::Form-->
+        </div> 
     </div>
-    <script type="text/javascript">
-       // Class definition
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const langSelect = document.getElementById('langSelect');
 
-var KTBootstrapTimepicker = function () {
+            langSelect.addEventListener('change', function () {
+                const selectedOption = langSelect.value;
+                const optionToURL = {
+                    'persian': 'persian-greet.html', 
+                    'arabic': 'arabic-greet.html',
+                    'english': 'english-greet.html'
+                };
 
-// Private functions
-var demos = function () {
-    // minimum setup
-    $('#kt_timepicker_1, #kt_timepicker_1_modal').timepicker();
-
-    // minimum setup
-    $('#kt_timepicker_2, #kt_timepicker_2_modal').timepicker({
-        minuteStep: 1,
-        defaultTime: '',
-        showSeconds: true,
-        showMeridian: false,
-        snapToStep: true
-    });
-
-    // default time
-    $('#kt_timepicker_3, #kt_timepicker_3_modal').timepicker({
-        defaultTime: '11:45:20 AM',
-        minuteStep: 1,
-        showSeconds: true,
-        showMeridian: true
-    });
-
-    // default time
-    $('#kt_timepicker_4, #kt_timepicker_4_modal').timepicker({
-        defaultTime: '10:30:20 AM',
-        minuteStep: 1,
-        showSeconds: true,
-        showMeridian: true
-    });
-}
-
-return {
-    // public functions
-    init: function() {
-        demos();
-    }
-};
-}();
-
-jQuery(document).ready(function() {
-KTBootstrapTimepicker.init();
-});
-    </script>
+                const selectedURL = optionToURL[selectedOption];
+                localStorage.setItem('selectedOption', selectedOption);
+                if (selectedURL) {
+                    window.location.href = selectedURL;
+                }
+            });
+            const storedOption = localStorage.getItem('selectedOption');
+            if (storedOption) {
+                langSelect.value = storedOption;
+            }
+        });
+      </script>
 </body>
- 
 </html>
